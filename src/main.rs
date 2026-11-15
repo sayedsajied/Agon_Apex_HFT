@@ -5,23 +5,23 @@ use serde_json::{json, Value};
 
 #[tokio::main]
 async fn main() {
-    println!("🚀 AGON APEX HFT CORE - STARTING...");
-    println!("⚙️ ENGINE 1: Delta Exchange WebSocket Connecting...");
+    println!("🚀 AGON APEX HFT CORE - THE TRIFECTA ENGINE STARTING...");
+    println!("⚙️ WARM-UP: Connecting to Delta Exchange...");
 
     let url = Url::parse("wss://socket.delta.exchange").unwrap();
     let (ws_stream, _) = connect_async(url).await.expect("❌ Connection Failed!");
-    println!("✅ Connected! Sending payload...");
+    println!("✅ Connected! Firing Final Payload for BTC, ETH & SOL...");
 
     let (mut write, mut read) = ws_stream.split();
 
-    // BTC/USDT का पेलोड
+    // तीनों कॉइन्स (BTC, ETH, SOL) का एक साथ रॉ पेलोड
     let subscribe_msg = json!({
         "type": "subscribe",
         "payload": {
             "channels": [
                 {
                     "name": "v2/ticker",
-                    "symbols": ["BTCUSDT"]
+                    "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"] 
                 }
             ]
         }
@@ -29,26 +29,31 @@ async fn main() {
 
     use futures_util::SinkExt;
     write.send(Message::Text(subscribe_msg.to_string())).await.unwrap();
-    println!("📡 Subscribed! Filtering raw data for Lightning Fast Execution...\n");
-    println!("--------------------------------------------------");
+    println!("📡 Subscribed to BTC, ETH & SOL! Pulling RAW Data Streams...\n");
+    println!("========================================================");
 
-    // यह लूप कचरा हटाकर सिर्फ काम के 3 नंबर निकालेगा
+    // तीनों इंजनों का रॉ टिक-डेटा (Raw Tick Data) पकड़ने का लूप
     while let Some(message) = read.next().await {
         match message {
             Ok(msg) => {
                 if msg.is_text() {
                     let text = msg.into_text().unwrap();
                     
-                    // JSON डेटा को डिकोड करना
                     if let Ok(parsed) = serde_json::from_str::<Value>(&text) {
-                        // सिर्फ वो डेटा निकालो जिसमें प्राइस है
                         if let (Some(symbol), Some(price), Some(bid), Some(ask)) = (
                             parsed.get("symbol").and_then(|s| s.as_str()),
                             parsed.get("mark_price").and_then(|p| p.as_str()),
                             parsed.get("best_bid").and_then(|b| b.as_str()),
                             parsed.get("best_ask").and_then(|a| a.as_str())
                         ) {
-                            println!("🎯 [{}]: PRICE: {} | BID: {} | ASK: {}", symbol, price, bid, ask);
+                            // तीनों कॉइन्स का रॉ डेटा अलग-अलग निशानों के साथ
+                            if symbol.contains("BTC") {
+                                println!("🟠 [BTC-ENGINE] RAW: PRICE: {} | BID: {} | ASK: {}", price, bid, ask);
+                            } else if symbol.contains("ETH") {
+                                println!("🔵 [ETH-ENGINE] RAW: PRICE: {} | BID: {} | ASK: {}", price, bid, ask);
+                            } else if symbol.contains("SOL") {
+                                println!("🟣 [SOL-ENGINE] RAW: PRICE: {} | BID: {} | ASK: {}", price, bid, ask);
+                            }
                         }
                     }
                 }
