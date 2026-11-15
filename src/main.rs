@@ -9,7 +9,7 @@ async fn main() {
         println!("⚙️ ENGINE 1: Delta Exchange WebSocket Connecting...");
 
             // डेल्टा एक्सचेंज का असली WebSocket URL
-                let url = Url::parse("wss://production-ws.delta.exchange").unwrap();
+                let url = Url::parse("wss://socket.delta.exchange").unwrap();
 
                     // सर्वर से असली कनेक्शन बनाना
                         let (ws_stream, _) = connect_async(url).await.expect("❌ Connection Failed!");
