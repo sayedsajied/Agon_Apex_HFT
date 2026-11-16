@@ -13,6 +13,8 @@ mod engine_07_kyles_lambda;
 mod engine_08_rolls_spread;
 mod engine_09_ofi_tracker;
 mod engine_10_iceberg_sniffer;
+mod engine_11_whale_sweep;
+
 
 
 #[tokio::main]
@@ -56,6 +58,8 @@ async fn main() {
                     engine_08_rolls_spread::process_tick(&parsed);
                     engine_09_ofi_tracker::process_tick(&parsed);
                     engine_10_iceberg_sniffer::process_tick(&parsed);
+                    engine_11_whale_sweep::process_tick(&parsed);
+                    
                     
                     
                 }
