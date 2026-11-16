@@ -20,6 +20,8 @@ mod engine_14_pressure_decay;
 mod engine_15_funding_basis;
 mod engine_16_kalman_matrix;
 mod engine_17_itos_drift;
+mod engine_18_ou_reversion;
+
 
 
 
@@ -77,6 +79,8 @@ async fn main() {
                     engine_15_funding_basis::process_tick(&parsed);
                     engine_16_kalman_matrix::process_tick(&parsed);
                     engine_17_itos_drift::process_tick(&parsed);
+                    engine_18_ou_reversion::process_tick(&parsed);
+                    
                     
                     
                     
