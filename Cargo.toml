@@ -20,3 +20,4 @@ url = "2.5"
 # 4. डेटा को डिकोड (JSON Parsing) करने का इंजन
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+nalgebra = "0.32"
