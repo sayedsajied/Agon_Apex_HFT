@@ -22,6 +22,8 @@ mod engine_16_kalman_matrix;
 mod engine_17_itos_drift;
 mod engine_18_ou_reversion;
 mod engine_19_jump_diffusion;
+mod engine_20_hurst_regime;
+
 
 
 
@@ -83,6 +85,8 @@ async fn main() {
                     engine_17_itos_drift::process_tick(&parsed);
                     engine_18_ou_reversion::process_tick(&parsed);
                     engine_19_jump_diffusion::process_tick(&parsed);
+                    engine_20_hurst_regime::process_tick(&parsed);
+                    
                     
                     
                     
