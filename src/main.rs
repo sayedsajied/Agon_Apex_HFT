@@ -11,6 +11,7 @@ mod engine_05_vpin_toxic;
 mod engine_06_hawkes_intensity;
 mod engine_07_kyles_lambda;
 mod engine_08_rolls_spread;
+mod engine_09_ofi_tracker;
 
 #[tokio::main]
 async fn main() {
@@ -51,6 +52,7 @@ async fn main() {
                     engine_06_hawkes_intensity::process_tick(&parsed);
                     engine_07_kyles_lambda::process_tick(&parsed);
                     engine_08_rolls_spread::process_tick(&parsed);
+                    engine_09_ofi_tracker::process_tick(&parsed);
                     
                 }
             }
