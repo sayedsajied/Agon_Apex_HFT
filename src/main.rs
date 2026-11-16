@@ -6,6 +6,7 @@ use url::Url;
 // === [PERMANENT MODULAR ENGINE SWITCHBOARD] ===
 mod engine_02_scalp_burst;
 mod engine_03_burst_velocity;
+mod engine_04_orderbook_wall;
 
 #[tokio::main]
 async fn main() {
@@ -41,6 +42,7 @@ async fn main() {
                     // Route raw tick data to Engine 02
                     engine_02_scalp_burst::process_tick(&parsed);
                     engine_03_burst_velocity::process_tick(&parsed);
+                    engine_04_orderbook_wall::process_tick(&parsed);
                     
                 }
             }
