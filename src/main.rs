@@ -14,6 +14,9 @@ mod engine_08_rolls_spread;
 mod engine_09_ofi_tracker;
 mod engine_10_iceberg_sniffer;
 mod engine_11_whale_sweep;
+mod engine_12_spoof_filter;
+
+
 
 
 
@@ -59,6 +62,9 @@ async fn main() {
                     engine_09_ofi_tracker::process_tick(&parsed);
                     engine_10_iceberg_sniffer::process_tick(&parsed);
                     engine_11_whale_sweep::process_tick(&parsed);
+                    engine_12_spoof_filter::process_tick(&parsed);
+                    
+                    
                     
                     
                     
