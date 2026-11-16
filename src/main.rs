@@ -5,6 +5,7 @@ use url::Url;
 
 // === [PERMANENT MODULAR ENGINE SWITCHBOARD] ===
 mod engine_02_scalp_burst;
+mod engine_03_burst_velocity;
 
 #[tokio::main]
 async fn main() {
@@ -16,10 +17,17 @@ async fn main() {
     let subscribe_msg = json!({
         "type": "subscribe",
         "payload": {
-            "channels": [{
-                "name": "v2/ticker",
-                "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"]
-            }]
+                        "channels": [
+                {
+                    "name": "v2/ticker",
+                    "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"]
+                },
+                {
+                    "name": "l2_orderbook",
+                    "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"]
+                }
+            ]
+            
         }
     });
 
@@ -32,6 +40,8 @@ async fn main() {
                 if let Ok(parsed) = serde_json::from_str::<Value>(&msg.into_text().unwrap()) {
                     // Route raw tick data to Engine 02
                     engine_02_scalp_burst::process_tick(&parsed);
+                    engine_03_burst_velocity::process_tick(&parsed);
+                    
                 }
             }
         }
