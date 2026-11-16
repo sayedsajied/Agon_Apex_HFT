@@ -17,6 +17,8 @@ mod engine_11_whale_sweep;
 mod engine_12_spoof_filter;
 mod engine_13_micro_deviation;
 mod engine_14_pressure_decay;
+mod engine_15_funding_basis;
+
 
 
 
@@ -69,6 +71,8 @@ async fn main() {
                     engine_12_spoof_filter::process_tick(&parsed);
                     engine_13_micro_deviation::process_tick(&parsed);
                     engine_14_pressure_decay::process_tick(&parsed);
+                    engine_15_funding_basis::process_tick(&parsed);
+                    
                     
                     
                     
