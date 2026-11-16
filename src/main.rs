@@ -21,6 +21,8 @@ mod engine_15_funding_basis;
 mod engine_16_kalman_matrix;
 mod engine_17_itos_drift;
 mod engine_18_ou_reversion;
+mod engine_19_jump_diffusion;
+
 
 
 
@@ -80,6 +82,8 @@ async fn main() {
                     engine_16_kalman_matrix::process_tick(&parsed);
                     engine_17_itos_drift::process_tick(&parsed);
                     engine_18_ou_reversion::process_tick(&parsed);
+                    engine_19_jump_diffusion::process_tick(&parsed);
+                    
                     
                     
                     
