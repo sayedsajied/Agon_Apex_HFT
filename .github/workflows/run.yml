@@ -1,8 +1,15 @@
 name: HFT Engine Test
 on: [push, workflow_dispatch]
+
+# नया कोड सेव होते ही पुराने चल रहे टेस्ट को तुरंत रोकेगा (Saves Free Quota)
+concurrency:
+  group: hft-live-test
+  cancel-in-progress: true
+
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
       - name: Start Delta Exchange Connection
