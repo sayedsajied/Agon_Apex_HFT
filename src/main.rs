@@ -9,6 +9,7 @@ mod engine_03_burst_velocity;
 mod engine_04_orderbook_wall;
 mod engine_05_vpin_toxic;
 mod engine_06_hawkes_intensity;
+mod engine_07_kyles_lambda;
 
 #[tokio::main]
 async fn main() {
@@ -47,6 +48,7 @@ async fn main() {
                     engine_04_orderbook_wall::process_tick(&parsed);
                     engine_05_vpin_toxic::process_tick(&parsed);
                     engine_06_hawkes_intensity::process_tick(&parsed);
+                    engine_07_kyles_lambda::process_tick(&parsed);
                     
                 }
             }
