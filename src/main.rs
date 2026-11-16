@@ -24,6 +24,7 @@ mod engine_18_ou_reversion;
 mod engine_19_jump_diffusion;
 mod engine_20_hurst_regime;
 mod engine_21_hmm_switcher;
+mod engine_22_shannon_entropy;
 
 
 
@@ -89,6 +90,8 @@ async fn main() {
                     engine_19_jump_diffusion::process_tick(&parsed);
                     engine_20_hurst_regime::process_tick(&parsed);
                     engine_21_hmm_switcher::process_tick(&parsed);
+                    engine_22_shannon_entropy::process_tick(&parsed);
+                    
                     
                     
                     
