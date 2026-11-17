@@ -26,6 +26,8 @@ mod engine_20_hurst_regime;
 mod engine_21_hmm_switcher;
 mod engine_22_shannon_entropy;
 mod engine_23_wavelet_denoiser;
+mod engine_24_mahalanobis_anomaly;
+
 
 
 
@@ -94,6 +96,8 @@ async fn main() {
                     engine_21_hmm_switcher::process_tick(&parsed);
                     engine_22_shannon_entropy::process_tick(&parsed);
                     engine_23_wavelet_denoiser::process_tick(&parsed);
+                    engine_24_mahalanobis_anomaly::process_tick(&parsed);
+                    
                     
                     
                     
