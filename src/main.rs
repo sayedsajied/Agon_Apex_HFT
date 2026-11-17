@@ -40,6 +40,7 @@ mod engine_34_wasserstein_transport;
 mod engine_35_hilbert_phase;
 mod engine_36_bsm_greeks_impulse;
 mod engine_37_vanna_volga_flow;
+mod engine_38_charm_vera_decay;
 
 
 
@@ -130,6 +131,7 @@ async fn main() {
                     engine_35_hilbert_phase::process_tick(&parsed);
                     engine_36_bsm_greeks_impulse::process_tick(&parsed);
                     engine_37_vanna_volga_flow::process_tick(&parsed);
+                    engine_38_charm_vera_decay::process_tick(&parsed);
                     
 
             
