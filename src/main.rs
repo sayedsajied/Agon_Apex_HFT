@@ -35,6 +35,7 @@ mod engine_29_yang_zhang_vol;
 mod engine_30_bipower_variation;
 mod engine_31_taylor_convexity;
 mod engine_32_lyapunov_chaos;
+mod engine_33_ks_regime_shift;
 
 
 
@@ -118,6 +119,7 @@ async fn main() {
                     engine_30_bipower_variation::process_tick(&parsed);
                     engine_31_taylor_convexity::process_tick(&parsed);
                     engine_32_lyapunov_chaos::process_tick(&parsed);
+                    engine_33_ks_regime_shift::process_tick(&parsed);
                     
                     
                     
