@@ -37,6 +37,8 @@ mod engine_31_taylor_convexity;
 mod engine_32_lyapunov_chaos;
 mod engine_33_ks_regime_shift;
 mod engine_34_wasserstein_transport;
+mod engine_35_hilbert_phase;
+
 
 
 
@@ -123,7 +125,10 @@ async fn main() {
                     engine_32_lyapunov_chaos::process_tick(&parsed);
                     engine_33_ks_regime_shift::process_tick(&parsed);
                     engine_34_wasserstein_transport::process_tick(&parsed);
-                    
+                    engine_35_hilbert_phase::process_tick(&parsed);
+
+            
+                
                     
                     
                     
