@@ -28,6 +28,8 @@ mod engine_22_shannon_entropy;
 mod engine_23_wavelet_denoiser;
 mod engine_24_mahalanobis_anomaly;
 mod engine_25_eigen_covariance;
+mod engine_26_lead_lag_matrix;
+
 
 
 
@@ -100,6 +102,8 @@ async fn main() {
                     engine_23_wavelet_denoiser::process_tick(&parsed);
                     engine_24_mahalanobis_anomaly::process_tick(&parsed);
                     engine_25_eigen_covariance::process_tick(&parsed);
+                    engine_26_lead_lag_matrix::process_tick(&parsed);
+                    
                     
                     
                     
