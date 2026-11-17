@@ -7,7 +7,8 @@ static LEAD_LAG_STATE: Mutex<(Vector3<f64>, Vector3<f64>, Vector3<f64>, Matrix3<
     Vector3::new(0.0, 0.0, 0.0),
     Vector3::new(0.0, 0.0, 0.0),
     Vector3::new(0.0, 0.0, 0.0),
-    Matrix3::zeros(),
+    Matrix3::new(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0),
+    
 ));
 
 // ENGINE 26: Tier-0 Cross-Asset Lead-Lag Matrix (BTC Leading ETH/SOL Arbitrage)
