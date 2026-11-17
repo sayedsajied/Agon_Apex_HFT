@@ -31,6 +31,7 @@ mod engine_25_eigen_covariance;
 mod engine_26_lead_lag_matrix;
 mod engine_27_cointegration_arb;
 mod engine_28_garch_volatility;
+mod engine_29_yang_zhang_vol;
 
 
 
@@ -108,6 +109,8 @@ async fn main() {
                     engine_26_lead_lag_matrix::process_tick(&parsed);
                     engine_27_cointegration_arb::process_tick(&parsed);
                     engine_28_garch_volatility::process_tick(&parsed);
+                    engine_29_yang_zhang_vol::process_tick(&parsed);
+                    
                     
                     
                     
