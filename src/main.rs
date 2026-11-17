@@ -42,6 +42,8 @@ mod engine_36_bsm_greeks_impulse;
 mod engine_37_vanna_volga_flow;
 mod engine_38_charm_vera_decay;
 mod engine_39_speed_zomma_gamma;
+mod engine_40_almgren_chriss;
+
 
 
 
@@ -135,6 +137,7 @@ async fn main() {
                     engine_37_vanna_volga_flow::process_tick(&parsed);
                     engine_38_charm_vera_decay::process_tick(&parsed);
                     engine_39_speed_zomma_gamma::process_tick(&parsed);
+                    engine_40_almgren_chriss::process_tick(&parsed);
                     
                     
 
