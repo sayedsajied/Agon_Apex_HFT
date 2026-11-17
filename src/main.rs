@@ -47,6 +47,8 @@ mod engine_41_avellaneda_stoikov;
 mod engine_42_nash_game_matrix;
 mod engine_43_lotka_volterra;
 mod engine_44_kelly_leverage;
+mod engine_45_evt_tail_shield;
+
 
 
 
@@ -149,6 +151,8 @@ async fn main() {
                     engine_42_nash_game_matrix::process_tick(&parsed);
                     engine_43_lotka_volterra::process_tick(&parsed);
                     engine_44_kelly_leverage::process_tick(&parsed);
+                    engine_45_evt_tail_shield::process_tick(&parsed);
+                    
                     
                     
                     
