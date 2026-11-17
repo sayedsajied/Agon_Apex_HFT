@@ -43,6 +43,7 @@ mod engine_37_vanna_volga_flow;
 mod engine_38_charm_vera_decay;
 mod engine_39_speed_zomma_gamma;
 mod engine_40_almgren_chriss;
+mod engine_41_avellaneda_stoikov;
 
 
 
@@ -138,6 +139,9 @@ async fn main() {
                     engine_38_charm_vera_decay::process_tick(&parsed);
                     engine_39_speed_zomma_gamma::process_tick(&parsed);
                     engine_40_almgren_chriss::process_tick(&parsed);
+                    engine_41_avellaneda_stoikov::process_tick(&parsed);
+
+                
                     
                     
 
