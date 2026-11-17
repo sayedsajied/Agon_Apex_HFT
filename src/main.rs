@@ -30,6 +30,8 @@ mod engine_24_mahalanobis_anomaly;
 mod engine_25_eigen_covariance;
 mod engine_26_lead_lag_matrix;
 mod engine_27_cointegration_arb;
+mod engine_28_garch_volatility;
+
 
 
 
@@ -105,6 +107,8 @@ async fn main() {
                     engine_25_eigen_covariance::process_tick(&parsed);
                     engine_26_lead_lag_matrix::process_tick(&parsed);
                     engine_27_cointegration_arb::process_tick(&parsed);
+                    engine_28_garch_volatility::process_tick(&parsed);
+                    
                     
                     
                     
