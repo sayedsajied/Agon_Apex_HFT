@@ -38,6 +38,7 @@ mod engine_32_lyapunov_chaos;
 mod engine_33_ks_regime_shift;
 mod engine_34_wasserstein_transport;
 mod engine_35_hilbert_phase;
+mod engine_36_bsm_greeks_impulse;
 
 
 
@@ -126,6 +127,8 @@ async fn main() {
                     engine_33_ks_regime_shift::process_tick(&parsed);
                     engine_34_wasserstein_transport::process_tick(&parsed);
                     engine_35_hilbert_phase::process_tick(&parsed);
+                    engine_36_bsm_greeks_impulse::process_tick(&parsed);
+                    
 
             
                 
