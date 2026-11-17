@@ -29,6 +29,7 @@ mod engine_23_wavelet_denoiser;
 mod engine_24_mahalanobis_anomaly;
 mod engine_25_eigen_covariance;
 mod engine_26_lead_lag_matrix;
+mod engine_27_cointegration_arb;
 
 
 
@@ -103,6 +104,7 @@ async fn main() {
                     engine_24_mahalanobis_anomaly::process_tick(&parsed);
                     engine_25_eigen_covariance::process_tick(&parsed);
                     engine_26_lead_lag_matrix::process_tick(&parsed);
+                    engine_27_cointegration_arb::process_tick(&parsed);
                     
                     
                     
