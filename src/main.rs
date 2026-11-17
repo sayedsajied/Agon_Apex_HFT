@@ -33,6 +33,7 @@ mod engine_27_cointegration_arb;
 mod engine_28_garch_volatility;
 mod engine_29_yang_zhang_vol;
 mod engine_30_bipower_variation;
+mod engine_31_taylor_convexity;
 
 
 
@@ -113,6 +114,8 @@ async fn main() {
                     engine_28_garch_volatility::process_tick(&parsed);
                     engine_29_yang_zhang_vol::process_tick(&parsed);
                     engine_30_bipower_variation::process_tick(&parsed);
+                    engine_31_taylor_convexity::process_tick(&parsed);
+                    
                     
                     
                     
