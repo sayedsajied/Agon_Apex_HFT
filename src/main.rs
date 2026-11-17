@@ -32,6 +32,8 @@ mod engine_26_lead_lag_matrix;
 mod engine_27_cointegration_arb;
 mod engine_28_garch_volatility;
 mod engine_29_yang_zhang_vol;
+mod engine_30_bipower_variation;
+
 
 
 
@@ -110,6 +112,7 @@ async fn main() {
                     engine_27_cointegration_arb::process_tick(&parsed);
                     engine_28_garch_volatility::process_tick(&parsed);
                     engine_29_yang_zhang_vol::process_tick(&parsed);
+                    engine_30_bipower_variation::process_tick(&parsed);
                     
                     
                     
