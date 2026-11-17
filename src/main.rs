@@ -41,6 +41,8 @@ mod engine_35_hilbert_phase;
 mod engine_36_bsm_greeks_impulse;
 mod engine_37_vanna_volga_flow;
 mod engine_38_charm_vera_decay;
+mod engine_39_speed_zomma_gamma;
+
 
 
 
@@ -132,6 +134,8 @@ async fn main() {
                     engine_36_bsm_greeks_impulse::process_tick(&parsed);
                     engine_37_vanna_volga_flow::process_tick(&parsed);
                     engine_38_charm_vera_decay::process_tick(&parsed);
+                    engine_39_speed_zomma_gamma::process_tick(&parsed);
+                    
                     
 
             
