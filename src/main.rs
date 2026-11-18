@@ -61,6 +61,8 @@ mod engine_55_nig_hyperbolic_levy;
 mod engine_56_ising_spin_lattice;
 mod engine_57_kuramoto_phase_sync;
 mod engine_58_boltzmann_free_energy;
+mod engine_59_tsallis_q_entropy;
+
 
 
 
@@ -187,6 +189,8 @@ async fn main() {
                     engine_56_ising_spin_lattice::process_tick(&parsed);
                     engine_57_kuramoto_phase_sync::process_tick(&parsed);
                     engine_58_boltzmann_free_energy::process_tick(&parsed);
+                    engine_59_tsallis_q_entropy::process_tick(&parsed);
+                    
                     
                     
                     
