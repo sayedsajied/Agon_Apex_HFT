@@ -52,6 +52,8 @@ mod engine_46_copula_tail_dep;
 mod engine_47_fokker_planck;
 mod engine_48_feynman_kac;
 mod engine_49_hjb_optimal_control;
+mod engine_50_heston_stoch_vol;
+
 
 
 
@@ -163,6 +165,8 @@ async fn main() {
                     engine_47_fokker_planck::process_tick(&parsed);
                     engine_48_feynman_kac::process_tick(&parsed);
                     engine_49_hjb_optimal_control::process_tick(&parsed);
+                    engine_50_heston_stoch_vol::process_tick(&parsed);
+                    
                     
                     
                     
