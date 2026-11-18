@@ -57,6 +57,7 @@ mod engine_51_sabr_vol_smile;
 mod engine_52_merton_jump_diffusion;
 mod engine_53_bates_svj_hybrid;
 mod engine_54_variance_gamma_levy;
+mod engine_55_nig_hyperbolic_levy;
 
 
 
@@ -177,6 +178,8 @@ async fn main() {
                     engine_52_merton_jump_diffusion::process_tick(&parsed);
                     engine_53_bates_svj_hybrid::process_tick(&parsed);
                     engine_54_variance_gamma_levy::process_tick(&parsed);
+                    engine_55_nig_hyperbolic_levy::process_tick(&parsed);
+                    
                     
                     
                     
