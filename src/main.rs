@@ -51,6 +51,8 @@ mod engine_45_evt_tail_shield;
 mod engine_46_copula_tail_dep;
 mod engine_47_fokker_planck;
 mod engine_48_feynman_kac;
+mod engine_49_hjb_optimal_control;
+
 
 
 
@@ -160,6 +162,7 @@ async fn main() {
                     engine_46_copula_tail_dep::process_tick(&parsed);
                     engine_47_fokker_planck::process_tick(&parsed);
                     engine_48_feynman_kac::process_tick(&parsed);
+                    engine_49_hjb_optimal_control::process_tick(&parsed);
                     
                     
                     
