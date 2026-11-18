@@ -73,6 +73,7 @@ mod engine_67_langevin_dynamics;
 mod engine_68_ornstein_uhlenbeck;
 mod engine_69_kramers_escape;
 mod engine_70_landau_ginzburg;
+mod engine_71_renormalization_group;
 
 
 
@@ -220,6 +221,8 @@ async fn main() {
                     engine_68_ornstein_uhlenbeck::process_tick(&parsed);
                     engine_69_kramers_escape::process_tick(&parsed);
                     engine_70_landau_ginzburg::process_tick(&parsed);
+                    engine_71_renormalization_group::process_tick(&parsed);
+                    
                     
                     
                     
