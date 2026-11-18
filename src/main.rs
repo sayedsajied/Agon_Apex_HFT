@@ -78,6 +78,7 @@ mod engine_72_topological_hall;
 mod engine_73_bose_fermi_condensate;
 mod engine_74_casimir_vacuum_force;
 mod engine_75_feynman_path_integral;
+mod engine_76_ricci_curvature_flow;
 
 
 
@@ -231,6 +232,7 @@ async fn main() {
                     engine_73_bose_fermi_condensate::process_tick(&parsed);
                     engine_74_casimir_vacuum_force::process_tick(&parsed);
                     engine_75_feynman_path_integral::process_tick(&parsed);
+                    engine_76_ricci_curvature_flow::process_tick(&parsed);
                     
                     
                     
