@@ -80,6 +80,8 @@ mod engine_74_casimir_vacuum_force;
 mod engine_75_feynman_path_integral;
 mod engine_76_ricci_curvature_flow;
 mod engine_77_navier_stokes_turbulence;
+mod engine_78_kolmogorov_cascade;
+
 
 
 
@@ -235,6 +237,8 @@ async fn main() {
                     engine_75_feynman_path_integral::process_tick(&parsed);
                     engine_76_ricci_curvature_flow::process_tick(&parsed);
                     engine_77_navier_stokes_turbulence::process_tick(&parsed);
+                    engine_78_kolmogorov_cascade::process_tick(&parsed);
+                    
                     
                     
                     
