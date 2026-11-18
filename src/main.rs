@@ -67,6 +67,8 @@ mod engine_61_kl_divergence_shift;
 mod engine_62_wasserstein_transport;
 mod engine_63_fisher_information;
 mod engine_64_schrodinger_tunneling;
+mod engine_65_heisenberg_uncertainty;
+
 
 
 
@@ -204,6 +206,7 @@ async fn main() {
                     engine_62_wasserstein_transport::process_tick(&parsed);
                     engine_63_fisher_information::process_tick(&parsed);
                     engine_64_schrodinger_tunneling::process_tick(&parsed);
+                    engine_65_heisenberg_uncertainty::process_tick(&parsed);
                     
                     
                     
