@@ -69,6 +69,8 @@ mod engine_63_fisher_information;
 mod engine_64_schrodinger_tunneling;
 mod engine_65_heisenberg_uncertainty;
 mod engine_66_quantum_harmonic_osc;
+mod engine_67_langevin_dynamics;
+
 
 
 
@@ -210,6 +212,7 @@ async fn main() {
                     engine_64_schrodinger_tunneling::process_tick(&parsed);
                     engine_65_heisenberg_uncertainty::process_tick(&parsed);
                     engine_66_quantum_harmonic_osc::process_tick(&parsed);
+                    engine_67_langevin_dynamics::process_tick(&parsed);
                     
                     
                     
