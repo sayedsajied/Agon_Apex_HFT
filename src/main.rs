@@ -59,6 +59,8 @@ mod engine_53_bates_svj_hybrid;
 mod engine_54_variance_gamma_levy;
 mod engine_55_nig_hyperbolic_levy;
 mod engine_56_ising_spin_lattice;
+mod engine_57_kuramoto_phase_sync;
+
 
 
 
@@ -181,6 +183,8 @@ async fn main() {
                     engine_54_variance_gamma_levy::process_tick(&parsed);
                     engine_55_nig_hyperbolic_levy::process_tick(&parsed);
                     engine_56_ising_spin_lattice::process_tick(&parsed);
+                    engine_57_kuramoto_phase_sync::process_tick(&parsed);
+                    
                     
                     
                     
