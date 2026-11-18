@@ -76,6 +76,7 @@ mod engine_70_landau_ginzburg;
 mod engine_71_renormalization_group;
 mod engine_72_topological_hall;
 mod engine_73_bose_fermi_condensate;
+mod engine_74_casimir_vacuum_force;
 
 
 
@@ -227,6 +228,7 @@ async fn main() {
                     engine_71_renormalization_group::process_tick(&parsed);
                     engine_72_topological_hall::process_tick(&parsed);
                     engine_73_bose_fermi_condensate::process_tick(&parsed);
+                    engine_74_casimir_vacuum_force::process_tick(&parsed);
                     
                     
                     
