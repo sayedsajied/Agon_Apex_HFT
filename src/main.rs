@@ -62,6 +62,8 @@ mod engine_56_ising_spin_lattice;
 mod engine_57_kuramoto_phase_sync;
 mod engine_58_boltzmann_free_energy;
 mod engine_59_tsallis_q_entropy;
+mod engine_60_renyi_multifractal;
+
 
 
 
@@ -190,6 +192,8 @@ async fn main() {
                     engine_57_kuramoto_phase_sync::process_tick(&parsed);
                     engine_58_boltzmann_free_energy::process_tick(&parsed);
                     engine_59_tsallis_q_entropy::process_tick(&parsed);
+                    engine_60_renyi_multifractal::process_tick(&parsed);
+                    
                     
                     
                     
