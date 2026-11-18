@@ -65,6 +65,8 @@ mod engine_59_tsallis_q_entropy;
 mod engine_60_renyi_multifractal;
 mod engine_61_kl_divergence_shift;
 mod engine_62_wasserstein_transport;
+mod engine_63_fisher_information;
+
 
 
 
@@ -199,6 +201,8 @@ async fn main() {
                     engine_60_renyi_multifractal::process_tick(&parsed);
                     engine_61_kl_divergence_shift::process_tick(&parsed);
                     engine_62_wasserstein_transport::process_tick(&parsed);
+                    engine_63_fisher_information::process_tick(&parsed);
+                    
                     
                     
                     
