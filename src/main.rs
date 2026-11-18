@@ -74,6 +74,7 @@ mod engine_68_ornstein_uhlenbeck;
 mod engine_69_kramers_escape;
 mod engine_70_landau_ginzburg;
 mod engine_71_renormalization_group;
+mod engine_72_topological_hall;
 
 
 
@@ -222,6 +223,8 @@ async fn main() {
                     engine_69_kramers_escape::process_tick(&parsed);
                     engine_70_landau_ginzburg::process_tick(&parsed);
                     engine_71_renormalization_group::process_tick(&parsed);
+                    engine_72_topological_hall::process_tick(&parsed);
+                    
                     
                     
                     
