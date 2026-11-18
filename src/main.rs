@@ -54,6 +54,7 @@ mod engine_48_feynman_kac;
 mod engine_49_hjb_optimal_control;
 mod engine_50_heston_stoch_vol;
 mod engine_51_sabr_vol_smile;
+mod engine_52_merton_jump_diffusion;
 
 
 
@@ -169,6 +170,7 @@ async fn main() {
                     engine_49_hjb_optimal_control::process_tick(&parsed);
                     engine_50_heston_stoch_vol::process_tick(&parsed);
                     engine_51_sabr_vol_smile::process_tick(&parsed);
+                    engine_52_merton_jump_diffusion::process_tick(&parsed);
                     
                     
                     
