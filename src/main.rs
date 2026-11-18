@@ -53,6 +53,8 @@ mod engine_47_fokker_planck;
 mod engine_48_feynman_kac;
 mod engine_49_hjb_optimal_control;
 mod engine_50_heston_stoch_vol;
+mod engine_51_sabr_vol_smile;
+
 
 
 
@@ -166,6 +168,7 @@ async fn main() {
                     engine_48_feynman_kac::process_tick(&parsed);
                     engine_49_hjb_optimal_control::process_tick(&parsed);
                     engine_50_heston_stoch_vol::process_tick(&parsed);
+                    engine_51_sabr_vol_smile::process_tick(&parsed);
                     
                     
                     
