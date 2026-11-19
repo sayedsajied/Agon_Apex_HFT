@@ -85,6 +85,7 @@ mod engine_79_mhd_plasma;
 mod engine_80_qcd_yang_mills;
 mod engine_81_einstein_event_horizon;
 mod engine_82_hawking_radiation;
+mod engine_83_ads_cft_holography;
 
 
 
@@ -249,6 +250,7 @@ async fn main() {
                     engine_80_qcd_yang_mills::process_tick(&parsed);
                     engine_81_einstein_event_horizon::process_tick(&parsed);
                     engine_82_hawking_radiation::process_tick(&parsed);
+                    engine_83_ads_cft_holography::process_tick(&parsed);
                     
                     
                     
