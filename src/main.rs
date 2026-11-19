@@ -82,6 +82,8 @@ mod engine_76_ricci_curvature_flow;
 mod engine_77_navier_stokes_turbulence;
 mod engine_78_kolmogorov_cascade;
 mod engine_79_mhd_plasma;
+mod engine_80_qcd_yang_mills;
+
 
 
 
@@ -240,6 +242,7 @@ async fn main() {
                     engine_77_navier_stokes_turbulence::process_tick(&parsed);
                     engine_78_kolmogorov_cascade::process_tick(&parsed);
                     engine_79_mhd_plasma::process_tick(&parsed);
+                    engine_80_qcd_yang_mills::process_tick(&parsed);
                     
                     
                     
