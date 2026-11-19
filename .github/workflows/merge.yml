@@ -1,0 +1,30 @@
+name: Merge All Engines
+
+on:
+  push:
+    paths:
+      - '.github/workflows/merge.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merge all .rs files into one file
+        run: |
+          rm -f ALL_ENGINES.txt
+          find . -type f -name "*.rs" -not -path "*/target/*" | sort | while read -r f; do
+            echo "===== FILE: $f =====" >> ALL_ENGINES.txt
+            cat "$f" >> ALL_ENGINES.txt
+            echo "" >> ALL_ENGINES.txt
+          done
+      - name: Commit merged file
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add ALL_ENGINES.txt
+          git commit -m "Merge all engines into ALL_ENGINES.txt" || exit 0
+          git push
