@@ -83,6 +83,8 @@ mod engine_77_navier_stokes_turbulence;
 mod engine_78_kolmogorov_cascade;
 mod engine_79_mhd_plasma;
 mod engine_80_qcd_yang_mills;
+mod engine_81_einstein_event_horizon;
+
 
 
 
@@ -243,6 +245,7 @@ async fn main() {
                     engine_78_kolmogorov_cascade::process_tick(&parsed);
                     engine_79_mhd_plasma::process_tick(&parsed);
                     engine_80_qcd_yang_mills::process_tick(&parsed);
+                    engine_81_einstein_event_horizon::process_tick(&parsed);
                     
                     
                     
