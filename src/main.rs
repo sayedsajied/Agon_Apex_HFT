@@ -87,6 +87,8 @@ mod engine_81_einstein_event_horizon;
 mod engine_82_hawking_radiation;
 mod engine_83_ads_cft_holography;
 mod engine_84_string_nambu_goto;
+mod engine_85_loop_quantum_gravity;
+
 
 
 
@@ -253,6 +255,8 @@ async fn main() {
                     engine_82_hawking_radiation::process_tick(&parsed);
                     engine_83_ads_cft_holography::process_tick(&parsed);
                     engine_84_string_nambu_goto::process_tick(&parsed);
+                    engine_85_loop_quantum_gravity::process_tick(&parsed);
+                    
                     
                     
                     
